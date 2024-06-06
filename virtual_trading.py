@@ -100,5 +100,5 @@ def main():
 if __name__ == "__main__":
 
     if st.button("Please Feedback us!"):
-        subprocess.Popen(["streamlit", "run", "feedback.py"])
+        subprocess.run(["streamlit", "run", "feedback.py"])
     main()
