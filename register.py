@@ -74,7 +74,7 @@ def main():
                 stored_password = get_user_password(conn, email)
                 if password == stored_password:
                     st.success("Login successful!")
-                    subprocess.Popen(["streamlit", "run", "candle.py"])
+                    subprocess.run(["streamlit", "run", "candle.py"])
 
                 else:
                     st.error("Incorrect email or password.")
