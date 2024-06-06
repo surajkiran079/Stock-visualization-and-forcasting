@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 from twilio.rest import Client
 import subprocess
-import register
+
 
 def fetch_stock_data(symbol, period, interval):
     stock_data = yf.download(symbol, period=period, interval=interval)
@@ -92,9 +92,9 @@ def main():
 if __name__ == "__main__":
 
     if st.button("Backtest-us !"):
-        subprocess.Popen(["streamlit", "run", "virtual_trading.py"])
+        subprocess.run(["streamlit", "run", "virtual_trading.py"])
     if st.button("Please Feedback us!"):
-        subprocess.Popen(["streamlit", "run", "feedback.py"])
+        subprocess.run(["streamlit", "run", "feedback.py"])
     main()
 
 
