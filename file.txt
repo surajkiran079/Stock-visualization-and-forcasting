@@ -1,5 +1,6 @@
 streamlit
-subprocess
+subprocess.run
+db-sqlite3
 yfinance
 plotly.graph_objects
 pandas
