@@ -29,7 +29,7 @@ st.subheader("srf.ns -  23")
 
 
 if st.button("main page!"):
-    subprocess.Popen(["streamlit", "run", "stocks.py"])
+    subprocess.run(["streamlit", "run", "stocks.py"])
 
 
 
