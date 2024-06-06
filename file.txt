@@ -2,6 +2,6 @@ streamlit
 subprocess.run
 db-sqlite3
 yfinance
-plotly.graph_objects
+plotly
 pandas
 twilio.rest
