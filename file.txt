@@ -1,5 +1,4 @@
 streamlit
-sqlite3
 subprocess
 yfinance
 plotly.graph_objects
