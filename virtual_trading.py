@@ -98,7 +98,4 @@ def main():
             st.error(f"Error fetching stock data: {e}")
 
 if __name__ == "__main__":
-
-    if st.button("Please Feedback us!"):
-        subprocess.run(["streamlit", "run", "feedback.py"])
     main()
