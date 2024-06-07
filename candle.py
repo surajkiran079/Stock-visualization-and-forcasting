@@ -44,7 +44,7 @@ def feedback_form():
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio('go to',["Main Page", "Stocks Page","feedback us","virtual Trading"])
+page = st.sidebar.radio('go to',["Main Page", "Stocks Page","virtual Trading","feedback us"])
 
 
 # Navigation logic
@@ -53,9 +53,10 @@ if page == "Main Page":
 elif page == "Stocks Page":
     stocks_page()
 elif page == "virtual Trading":
-    virtual_trading.main()
+    virtual_tradings()
+    
 elif page == "feedback us":
-    feedback.main()
+    feedback_form()
 
 
 
