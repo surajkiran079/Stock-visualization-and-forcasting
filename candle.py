@@ -1,35 +1,61 @@
 import streamlit as st
-import yfinance as yf
-import plotly.graph_objects as go
-import pandas as pd
-from twilio.rest import Client
-import subprocess
-import register
+import feedback
+import stocks
+import virtual_trading
+
+def main_page():
+    st.title("Welcome ! our website")
+
+    st.title("Read the Documentation mentioned below before using the Platform.")
+    st.subheader("Stocks and their ER Indicator Values:")
+    st.write("""We are not a SEBI registered platform. Please consult your financial adviser before investment or do your own research while investing and backtest the platform.""")
+
+    st.write("""
+        ### Follow the Values for Investment Purpose
+        These values are backtested. However, always ensure to perform your own due diligence.
+        """)
+
+    st.write("""
+        ### List of Stocks and Their Threshold Values
+        - **hdfcbnk.ns** - 20
+        - **sbin.ns** - 21
+        - **kotakbnk.ns** - 20
+        - **reliance.ns** - 22
+        - **asianpaint.ns** - 20
+        - **sail.ns** - 20
+        - **coalindia.ns** - 20
+        - **bpcl.ns** - 22
+        - **tcs.ns** - 23
+        - **upl.ns** - 23
+        - **srf.ns** - 23
+        """)
+
+def stocks_page():
+    stocks.main()
+
+def virtual_tradings():
+    virtual_trading.main()
+
+def feedback_form():
+    feedback.main()
 
 
-st.title("Stocks and ER Indicator values")
-st.subheader("Read the Documentation mentioned below before using Platform")
-st.subheader("We are not Sebi registered platform,please consult to your financial adviser before Investment or do your own research while investment and backtest the platform")
-
-st.subheader("Follow the Values for investment purpose,these value are Back Tested")
-st.subheader("List of stocks and it's Theshold value")
-
-st.subheader("hdfcbnk.ns -  20")
-st.subheader("sbin.ns -  21")
-st.subheader("kotakbnk.ns -  20")
-st.subheader("reliance.ns -  22")
-st.subheader("asianpaint.ns -  20")
-st.subheader("sail.ns -  20")
-st.subheader("coalindia.ns -  20")
-st.subheader("bpcl.ns -  22")
-st.subheader("tcs.ns -  23")
-st.subheader("upl.ns -  23")
-st.subheader("srf.ns -  23")
 
 
+# Sidebar for navigation
+st.sidebar.title("Navigation")
+page = st.sidebar.radio('go to',["Main Page", "Stocks Page","feedback us","virtual Trading"])
 
-if st.button("main page!"):
-    subprocess.run(["streamlit", "run", "stocks.py"])
+
+# Navigation logic
+if page == "Main Page":
+    main_page()
+elif page == "Stocks Page":
+    stocks_page()
+elif page == "virtual Trading":
+    virtual_trading.main()
+elif page == "feedback us":
+    feedback.main()
 
 
 
