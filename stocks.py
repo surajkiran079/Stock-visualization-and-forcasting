@@ -3,7 +3,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 import pandas as pd
 from twilio.rest import Client
-import subprocess
+
 
 
 def fetch_stock_data(symbol, period, interval):
@@ -90,11 +90,6 @@ def main():
 
 
 if __name__ == "__main__":
-
-    if st.button("Backtest-us !"):
-        subprocess.run(["streamlit", "run", "virtual_trading.py"])
-    if st.button("Please Feedback us!"):
-        subprocess.run(["streamlit", "run", "feedback.py"])
     main()
 
 
