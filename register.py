@@ -75,7 +75,8 @@ def main():
                 stored_password = get_user_password(conn, email)
                 if password == stored_password:
                     st.success("Login successful!")
-                    webbrowser.open('https://stock-visualization-and-forcasting.onrender.com')
+                    st.markdown('<a href="https://stock-visualization-and-forcasting.onrender.com" target="_blank">Go to Main Page</a>',
+                unsafe_allow_html=True)
 
                 else:
                     st.error("Incorrect email or password.")
