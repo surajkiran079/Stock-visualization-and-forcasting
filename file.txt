@@ -5,4 +5,4 @@ yfinance
 plotly
 pandas
 twilio
-webbrowser
+pycopy-webbrowser
