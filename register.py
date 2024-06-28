@@ -75,7 +75,7 @@ def main():
                 stored_password = get_user_password(conn, email)
                 if password == stored_password:
                     st.success("Login successful!")
-                    st.markdown('<a href="https://stock-visualization-and-forcasting.onrender.com" target="_blank">Go to Main Page</a>',
+                    st.markdown('<a href="https://stock-visualization-and-forcasting-2.onrender.com" target="_blank">Go to Main Page</a>',
                 unsafe_allow_html=True)
 
                 else:
