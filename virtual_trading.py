@@ -2,7 +2,6 @@ import streamlit as st
 import yfinance as yf
 import plotly.graph_objects as go
 import pandas as pd
-import subprocess
 
 def fetch_stock_data(symbol, start_date, end_date, interval):
     stock_data = yf.download(symbol, start=start_date, end=end_date, interval=interval)
