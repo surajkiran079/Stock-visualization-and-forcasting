@@ -1,1 +1,1 @@
-# Stock-visualization-and-forcasting
+# ER-Stock-Indicator
