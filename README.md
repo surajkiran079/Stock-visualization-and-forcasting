@@ -1,1 +1,1 @@
-# Stock-visualization-and-forcasting.
+# Stock-visualization-and-forcasting
